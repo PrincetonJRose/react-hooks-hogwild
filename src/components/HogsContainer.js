@@ -28,7 +28,9 @@ const HogsContainer =( )=> {
     }
 
     const filterHogs =( )=> {
+        
         let filteredHogs = []
+
         if ( filter === 'true' )
             filteredHogs = hogs.filter( hog => hog.greased )
         else if ( filter === 'false' )
@@ -39,7 +41,9 @@ const HogsContainer =( )=> {
     }
 
     const sortHogs = filteredHogs => {
+        
         let sortedHogs = [ ...filteredHogs ]
+        
         if ( sort === 'Weight' )
             return sortedHogs.sort( ( hog1, hog2 ) => hog1.weight - hog2.weight )
         else if ( sort === 'Name' )
